@@ -4,6 +4,8 @@
 int main(int argc, char* args[]) {
 	SDL_Window* window;
 	SDL_Init(SDL_INIT_VIDEO);
+	bool quit = false;
+	SDL_Event input;
 
 	window = SDL_CreateWindow(
 		"Golf2d",
@@ -18,7 +20,11 @@ int main(int argc, char* args[]) {
 		return 1;
 	}
 
-	SDL_Delay(3000);
+	while (!quit) {
+		while (SDL_PollEvent(&input) > 0) {
+			if (input.type == SDL_QUIT) quit = true;
+		}
+	}
 
 	SDL_DestroyWindow(window);
 
