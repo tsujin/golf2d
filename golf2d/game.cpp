@@ -41,6 +41,7 @@ void Game::cleanup() {
 	SDL_Quit();
 }
 
+
 void Game::HandleEvents() {
 	SDL_Event event;
 	SDL_PollEvent(&event);
