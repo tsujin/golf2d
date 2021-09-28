@@ -150,6 +150,9 @@
   <ItemGroup>
     <Image Include="assets\ball.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assets\game.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
