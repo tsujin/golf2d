@@ -31,7 +31,6 @@ void Game::start(const char* title, int width, int height) {
 		SDL_FreeSurface(tempSurface);
 	}
 
-
 }
 
 void Game::cleanup() {
@@ -41,7 +40,6 @@ void Game::cleanup() {
 	IMG_Quit();
 	SDL_Quit();
 }
-
 
 void Game::HandleEvents() {
 	SDL_Event event;
@@ -66,4 +64,3 @@ void Game::render() {
 	SDL_RenderCopy(renderer, ballTexture, NULL, NULL);
 	SDL_RenderPresent(renderer);
 }
-
