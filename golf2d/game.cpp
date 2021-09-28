@@ -58,9 +58,7 @@ void Game::HandleEvents() {
 }
 
 void Game::update() {
-	int cnt = 0;
-	cnt++;
-	std::cout << cnt;
+	
 }
 
 void Game::render() {
