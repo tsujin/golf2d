@@ -3,7 +3,7 @@
 
 struct Vec2f { 
 	float x, y; 
-	float operator +(Vec2f& other);
+	Vec2f operator +(Vec2f& other);
 };
 
 class Ball {
@@ -12,6 +12,5 @@ class Ball {
 public:
 	Vec2f position, velocity;
 	Ball(Vec2f position);
-	
-	void update();
+
 };

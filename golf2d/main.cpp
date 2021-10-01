@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
 		deltaTime = (double)((NOW - LAST) * 1000 / (double)SDL_GetPerformanceFrequency());
 		game.HandleEvents();
-		game.update();
+		game.update(deltaTime);
 		game.render();
 
 		std::cout << deltaTime << "\n";

@@ -2,6 +2,7 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include "ball.h"
 
 class Game {
 	SDL_Window* window;
@@ -15,8 +16,9 @@ public:
 	void cleanup();
 
 	void HandleEvents();
-	void update();
+	void update(double deltaTime);
 	void render();
 
 	bool running;
+	Ball& ball;
 };

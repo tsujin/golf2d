@@ -41,7 +41,6 @@ void Game::cleanup() {
 	SDL_Quit();
 }
 
-
 void Game::HandleEvents() {
 	SDL_Event event;
 	SDL_PollEvent(&event);
@@ -56,7 +55,7 @@ void Game::HandleEvents() {
 	}
 }
 
-void Game::update() {
+void Game::update(double deltaTime) {
 	
 }
 
