@@ -20,5 +20,5 @@ public:
 	void render();
 
 	bool running;
-	Ball& ball;
+	Ball* ball;
 };

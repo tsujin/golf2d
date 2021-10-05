@@ -25,6 +25,8 @@ void Game::start(const char* title, int width, int height) {
 			throw std::runtime_error("Unable to create renderer.");
 		}
 
+		Ball* ball = new Ball(Vec2f{ 0, 0 });
+
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 		SDL_Surface* tempSurface = IMG_Load("assets/ball.png");
 		ballTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
@@ -39,6 +41,8 @@ void Game::cleanup() {
 	SDL_DestroyRenderer(renderer);
 	IMG_Quit();
 	SDL_Quit();
+
+	delete ball;
 }
 
 void Game::HandleEvents() {
